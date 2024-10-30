@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/DemoInstaller/">
+    <file alias="Main.qml">/home/chris/Projects/QT/DemoInstaller/Main.qml</file>
+  </qresource>
+</RCC>
+

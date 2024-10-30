@@ -1,0 +1,10 @@
+-I
+/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug
+-I
+/usr/qml
+--resource
+/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/qmake_DemoInstaller.qrc
+--resource
+/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/appDemoInstaller_raw_qml_0.qrc
+--module
+DemoInstaller
