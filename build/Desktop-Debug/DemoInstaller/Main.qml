@@ -1,14 +1,9 @@
-/*
- *  SPDX-FileCopyrightText: 2015 Marco Martin <mart@kde.org>
- *
- *  SPDX-License-Identifier: LGPL-2.0-or-later
- */
-
 import QtQuick
-import QtQuick.Controls as Controls
-import QtQuick.Layouts
-import org.kde.kirigami as Kirigami
+import QtQuick.Controls as Controls // Needed for various controls (https://doc.qt.io/qt-6/qtquick-controls-qmlmodule.html)
+import QtQuick.Layouts // Needed for Column/Row Layout (https://doc.qt.io/qt-6/qtquicklayouts-index.html)
+import org.kde.kirigami as Kirigami // Needed for various KDE controls that follow the KDE Human Interface Guidelines (https://develop.kde.org/docs/getting-started/kirigami/)
 import QtQuick.Dialogs // Needed for FileDialog (used to select the location of the CD/ISO)
+import DemoInstaller // Needed for Backend type that runs the install script
 
 Kirigami.ApplicationWindow {
     id: window
@@ -16,6 +11,9 @@ Kirigami.ApplicationWindow {
     height: Kirigami.Units.gridUnit * 36
     title: qsTr("Demo Installer")
     pageStack.initialPage: welcomePage
+
+    property int randNum: 0
+    property string output: "nothing yet"
 
     Kirigami.ScrollablePage {
         id: welcomePage
@@ -26,7 +24,6 @@ Kirigami.ApplicationWindow {
             Kirigami.Action {
                 text:"Next"
                 icon.name: "go-next"
-                enabled: True
                 onTriggered: pageStack.push(cdISOLocationPage)
             }
         ]
@@ -46,16 +43,16 @@ Kirigami.ApplicationWindow {
             Controls.Label {
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
-                text: "This application will help you install and play your Windows Demo CD based game on Linux. Once installed from CD whenever you launch this application it will take you directly into your game, no CD needed! Press the Next button above to proceed."
+                text: "This application will help you install and play your Windows Demo CD based game on Linux. Once installed from CD, whenever you launch this application it will take you directly into your game, no CD needed! Press the Next button above to proceed."
             }
         }
 
-        Image {
-            id: cover
-            source: "./Images/RiskCover.png"
-            anchors.top: header.bottom
-            anchors.bottom: footer.top
-        }
+        // Image {
+        //     id: cover
+        //     source: "./Images/RiskCover.png"
+        //     anchors.top: header.bottom
+        //     anchors.bottom: footer.top
+        // }
 
         ColumnLayout {
             id: footer
@@ -87,15 +84,28 @@ Kirigami.ApplicationWindow {
         Layout.fillWidth: true
         title: qsTr("Demo CD/ISO Location")
 
+        Backend {
+            id: myBackend
+
+            onNumberEmitted: (num) => {
+                                 randNum = num
+                             }
+
+            onScriptRun: (scriptOutput) => {
+                             output = scriptOutput
+                         }
+        }
+
         actions: [
             Kirigami.Action {
                 text:"Install"
                 icon.name: "install"
-                enabled: True
-                onTriggered: pageStack.push(installCompletePage)
+                onTriggered: {
+                    // myBackend.generateNumber(2, 5)
+                    myBackend.runScript("billybob")
+                }
             }
         ]
-
 
         ColumnLayout {
             spacing: Kirigami.Units.smallSpacing
@@ -128,6 +138,12 @@ Kirigami.ApplicationWindow {
                     // onAccepted: image.source = selectedFile
                 }
             }
+
+            Controls.Label {
+                Layout.fillWidth: true
+                wrapMode: Text.WordWrap
+                text: output
+            }
         }
     }
 
@@ -140,7 +156,6 @@ Kirigami.ApplicationWindow {
             Kirigami.Action {
                 text:"Launch"
                 icon.name: "launch"
-                enabled: True
                 onTriggered: print ("Launching")
             }
         ]

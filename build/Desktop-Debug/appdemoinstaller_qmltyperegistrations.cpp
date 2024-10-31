@@ -7,6 +7,7 @@
 #include <QtQml/qqml.h>
 #include <QtQml/qqmlmoduleregistration.h>
 
+#include <backend.h>
 
 
 #if !defined(QT_STATIC)
@@ -16,6 +17,7 @@
 #endif
 Q_QMLTYPE_EXPORT void qml_register_types_DemoInstaller()
 {
+    qmlRegisterTypesAndRevisions<Backend>("DemoInstaller", 1);
     qmlRegisterModule("DemoInstaller", 1, 0);
 }
 

@@ -1,0 +1,24 @@
+{
+    "classes": [
+        {
+            "className": "ScriptLauncher",
+            "methods": [
+                {
+                    "access": "public",
+                    "name": "launchScript",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "ScriptLauncher",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "ScriptLauncher.h",
+    "outputRevision": 68
+}

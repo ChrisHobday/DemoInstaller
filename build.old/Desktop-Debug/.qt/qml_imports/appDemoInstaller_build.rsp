@@ -1,0 +1,14 @@
+-rootPath
+/home/chris/Projects/QT/DemoInstaller
+-cmake-output
+-output-file
+/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/qml_imports/appDemoInstaller_build.cmake
+-importPath
+/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller
+-importPath
+/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug
+-importPath
+/usr/qml
+-qrcFiles
+/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/qmake_DemoInstaller.qrc
+/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/appDemoInstaller_raw_qml_0.qrc

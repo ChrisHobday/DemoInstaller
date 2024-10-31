@@ -1,0 +1,169 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-4279647f0eda0d3f75fc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DemoInstaller",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-ab0bf8d809918392a7b8.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-089f346e3df1702ef4ca.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-42fb96ea237a328a6c71.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-514cb00782aae2839ba4.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDemoInstaller::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDemoInstaller-Debug-563c3092e1add2f8912c.json",
+					"name" : "appDemoInstaller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDemoInstaller_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDemoInstaller_autogen-Debug-a15aa36bc02d064f8f67.json",
+					"name" : "appDemoInstaller_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDemoInstaller_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDemoInstaller_autogen_timestamp_deps-Debug-a0ed2fe8065eb95555d8.json",
+					"name" : "appDemoInstaller_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDemoInstaller_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDemoInstaller_qmlimportscan-Debug-507908269acd4b03066c.json",
+					"name" : "appDemoInstaller_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDemoInstaller_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDemoInstaller_qmllint-Debug-0b1512c09a3567eec031.json",
+					"name" : "appDemoInstaller_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDemoInstaller_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDemoInstaller_qmllint_json-Debug-5d0d2e88e5a35acec993.json",
+					"name" : "appDemoInstaller_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDemoInstaller_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDemoInstaller_qmllint_module-Debug-588b58618297df11ebd4.json",
+					"name" : "appDemoInstaller_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDemoInstaller_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDemoInstaller_qmltyperegistration-Debug-242b2f08e70af91f7ceb.json",
+					"name" : "appDemoInstaller_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appDemoInstaller_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appDemoInstaller_tooling-Debug-7b8d27e16c24d6e6a140.json",
+					"name" : "appDemoInstaller_tooling",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug",
+		"source" : "/home/chris/Projects/QT/DemoInstaller"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

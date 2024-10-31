@@ -1,0 +1,40 @@
+{
+    "classes": [
+        {
+            "classInfos": [
+                {
+                    "name": "QML.Element",
+                    "value": "auto"
+                }
+            ],
+            "className": "Installer",
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "min",
+                            "type": "int"
+                        },
+                        {
+                            "name": "max",
+                            "type": "int"
+                        }
+                    ],
+                    "name": "generateNumber",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "Installer",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "installer.h",
+    "outputRevision": 68
+}

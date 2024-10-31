@@ -81,6 +81,14 @@ build CMakeFiles/appDemoInstaller.dir/build/Desktop-Debug/.qt/rcc/qrc_qmake_Demo
   OBJECT_DIR = CMakeFiles/appDemoInstaller.dir
   OBJECT_FILE_DIR = CMakeFiles/appDemoInstaller.dir/build/Desktop-Debug/.qt/rcc
 
+build CMakeFiles/appDemoInstaller.dir/backend.cpp.o: CXX_COMPILER__appDemoInstaller_unscanned_Debug /home/chris/Projects/QT/DemoInstaller/backend.cpp || cmake_object_order_depends_target_appDemoInstaller
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLBUILTINS_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB
+  DEP_FILE = CMakeFiles/appDemoInstaller.dir/backend.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -fdiagnostics-color=always -fPIC
+  INCLUDES = -I/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/appDemoInstaller_autogen/include -I/home/chris/Projects/QT/DemoInstaller -isystem /usr/include/QtQml/6.7.3 -isystem /usr/include/QtQml/6.7.3/QtQml -isystem /usr/include/QtCore/6.7.3 -isystem /usr/include/QtCore/6.7.3/QtCore -isystem /usr/include/QtCore -isystem /usr/mkspecs/linux-g++ -isystem /usr/include/QtQmlBuiltins/6.7.3 -isystem /usr/include/QtQmlBuiltins/6.7.3/QtQmlBuiltins -isystem /usr/include/QtQmlBuiltins -isystem /usr/include/QtQml -isystem /usr/include/QtQmlIntegration -isystem /usr/include/QtNetwork -isystem /usr/include/QtQuick -isystem /usr/include/QtGui -isystem /usr/include/QtQmlModels -isystem /usr/include/QtOpenGL
+  OBJECT_DIR = CMakeFiles/appDemoInstaller.dir
+  OBJECT_FILE_DIR = CMakeFiles/appDemoInstaller.dir
+
 build CMakeFiles/appDemoInstaller.dir/build/Desktop-Debug/.rcc/qmlcache/appDemoInstaller_qmlcache_loader.cpp.o: CXX_COMPILER__appDemoInstaller_unscanned_Debug /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.rcc/qmlcache/appDemoInstaller_qmlcache_loader.cpp || cmake_object_order_depends_target_appDemoInstaller
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_OPENGL_LIB -DQT_QMLBUILTINS_LIB -DQT_QMLINTEGRATION_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_QUICK_LIB
   DEP_FILE = CMakeFiles/appDemoInstaller.dir/build/Desktop-Debug/.rcc/qmlcache/appDemoInstaller_qmlcache_loader.cpp.o.d
@@ -113,7 +121,7 @@ build CMakeFiles/appDemoInstaller.dir/build/Desktop-Debug/.qt/rcc/qrc_appDemoIns
 #############################################
 # Link the executable appDemoInstaller
 
-build appDemoInstaller: CXX_EXECUTABLE_LINKER__appDemoInstaller_Debug CMakeFiles/appDemoInstaller.dir/appDemoInstaller_autogen/mocs_compilation.cpp.o CMakeFiles/appDemoInstaller.dir/main.cpp.o CMakeFiles/appDemoInstaller.dir/appdemoinstaller_qmltyperegistrations.cpp.o CMakeFiles/appDemoInstaller.dir/build/Desktop-Debug/.qt/rcc/qrc_qmake_DemoInstaller.cpp.o CMakeFiles/appDemoInstaller.dir/build/Desktop-Debug/.rcc/qmlcache/appDemoInstaller_qmlcache_loader.cpp.o CMakeFiles/appDemoInstaller.dir/build/Desktop-Debug/.rcc/qmlcache/appDemoInstaller_Main_qml.cpp.o CMakeFiles/appDemoInstaller.dir/build/Desktop-Debug/.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.7.3 /usr/lib/x86_64-linux-gnu/libQt6QmlModels.so.6.7.3 /usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.7.3 /usr/lib/x86_64-linux-gnu/libQt6QmlBuiltins.a /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.7.3 /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.7.3 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.7.3 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.7.3 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || appDemoInstaller_autogen appDemoInstaller_autogen_timestamp_deps appDemoInstaller_qmlimportscan appDemoInstaller_tooling
+build appDemoInstaller: CXX_EXECUTABLE_LINKER__appDemoInstaller_Debug CMakeFiles/appDemoInstaller.dir/appDemoInstaller_autogen/mocs_compilation.cpp.o CMakeFiles/appDemoInstaller.dir/main.cpp.o CMakeFiles/appDemoInstaller.dir/appdemoinstaller_qmltyperegistrations.cpp.o CMakeFiles/appDemoInstaller.dir/build/Desktop-Debug/.qt/rcc/qrc_qmake_DemoInstaller.cpp.o CMakeFiles/appDemoInstaller.dir/backend.cpp.o CMakeFiles/appDemoInstaller.dir/build/Desktop-Debug/.rcc/qmlcache/appDemoInstaller_qmlcache_loader.cpp.o CMakeFiles/appDemoInstaller.dir/build/Desktop-Debug/.rcc/qmlcache/appDemoInstaller_Main_qml.cpp.o CMakeFiles/appDemoInstaller.dir/build/Desktop-Debug/.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.7.3 /usr/lib/x86_64-linux-gnu/libQt6QmlModels.so.6.7.3 /usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.7.3 /usr/lib/x86_64-linux-gnu/libQt6QmlBuiltins.a /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.7.3 /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.7.3 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.7.3 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.7.3 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || appDemoInstaller_autogen appDemoInstaller_autogen_timestamp_deps appDemoInstaller_qmlimportscan appDemoInstaller_tooling
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.7.3  /usr/lib/x86_64-linux-gnu/libQt6QmlModels.so.6.7.3  /usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.7.3  /usr/lib/x86_64-linux-gnu/libQt6QmlBuiltins.a  /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.7.3  /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.7.3  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.7.3  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.7.3  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
   OBJECT_DIR = CMakeFiles/appDemoInstaller.dir
@@ -174,7 +182,7 @@ build all_qmllint_module: phony appDemoInstaller_qmllint_module
 #############################################
 # Utility command for appDemoInstaller_tooling
 
-build appDemoInstaller_tooling: phony DemoInstaller/Main.qml
+build appDemoInstaller_tooling: phony DemoInstaller/Main.qml DemoInstaller/Test.sh
 
 
 #############################################
@@ -309,7 +317,7 @@ build .rcc/qmlcache/appDemoInstaller_Main_qml.cpp | ${cmake_ninja_workdir}.rcc/q
 #############################################
 # Custom command for .qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp
 
-build .qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Main.qml .qt/rcc/appDemoInstaller_raw_qml_0.qrc /usr/libexec/rcc || appDemoInstaller_autogen appDemoInstaller_autogen_timestamp_deps appDemoInstaller_qmlimportscan appDemoInstaller_tooling
+build .qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Main.qml /home/chris/Projects/QT/DemoInstaller/Test.sh .qt/rcc/appDemoInstaller_raw_qml_0.qrc /usr/libexec/rcc || appDemoInstaller_autogen appDemoInstaller_autogen_timestamp_deps appDemoInstaller_qmlimportscan appDemoInstaller_tooling
   COMMAND = cd /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug && /usr/libexec/rcc --output /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp --name appDemoInstaller_raw_qml_0 /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/appDemoInstaller_raw_qml_0.qrc
   DESC = Running rcc for resource appDemoInstaller_raw_qml_0
   restat = 1
@@ -368,6 +376,15 @@ build CMakeFiles/appDemoInstaller_qmllint_module | ${cmake_ninja_workdir}CMakeFi
 build DemoInstaller/Main.qml | ${cmake_ninja_workdir}DemoInstaller/Main.qml: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Main.qml
   COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/Main.qml /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Main.qml
   DESC = Copying Main.qml to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Main.qml
+  restat = 1
+
+
+#############################################
+# Custom command for DemoInstaller/Test.sh
+
+build DemoInstaller/Test.sh | ${cmake_ninja_workdir}DemoInstaller/Test.sh: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Test.sh
+  COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/Test.sh /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Test.sh
+  DESC = Copying Test.sh to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Test.sh
   restat = 1
 
 
