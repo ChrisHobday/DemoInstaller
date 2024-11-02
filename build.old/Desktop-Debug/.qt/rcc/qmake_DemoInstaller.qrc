@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/DemoInstaller">
-    <file alias="qmldir">/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/qmldir</file>
-  </qresource>
-</RCC>
-

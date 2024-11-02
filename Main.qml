@@ -2,18 +2,26 @@ import QtQuick
 import QtQuick.Controls as Controls // Needed for various controls (https://doc.qt.io/qt-6/qtquick-controls-qmlmodule.html)
 import QtQuick.Layouts // Needed for Column/Row Layout (https://doc.qt.io/qt-6/qtquicklayouts-index.html)
 import org.kde.kirigami as Kirigami // Needed for various KDE controls that follow the KDE Human Interface Guidelines (https://develop.kde.org/docs/getting-started/kirigami/)
-import QtQuick.Dialogs // Needed for FileDialog (used to select the location of the CD/ISO)
+import QtQuick.Dialogs // Needed for FolderDialog (used to select the location of the CD with a dialog)
 import DemoInstaller // Needed for Backend type that runs the install script
 
 Kirigami.ApplicationWindow {
-    id: window
+    id: installerWindow
     width: Kirigami.Units.gridUnit * 64
     height: Kirigami.Units.gridUnit * 36
     title: qsTr("Demo Installer")
-    pageStack.initialPage: welcomePage
+    pageStack.initialPage: welcomePage //Set the initial page stack page to the welcome page
 
-    property int randNum: 0
-    property string output: "nothing yet"
+    property string cdMountLocation: ""
+
+    //Tries to get the CD mount location if there is one, by using custom Backend Type to run a bash script
+    Backend {
+        id: getCDMountLocation
+
+        onScriptRun: (scriptOutput) => {
+                         cdMountLocation = scriptOutput
+                     }
+    }
 
     Kirigami.ScrollablePage {
         id: welcomePage
@@ -24,7 +32,10 @@ Kirigami.ApplicationWindow {
             Kirigami.Action {
                 text:"Next"
                 icon.name: "go-next"
-                onTriggered: pageStack.push(cdISOLocationPage)
+                onTriggered: {
+                    getCDMountLocation.runScript("/var/home/chris/Projects/QT/DemoInstaller/GetMountLocation.sh")
+                    pageStack.push(cdLocationPage)
+                }
             }
         ]
 
@@ -49,7 +60,7 @@ Kirigami.ApplicationWindow {
 
         // Image {
         //     id: cover
-        //     source: "./Images/RiskCover.png"
+        //     source: "./Images/DemoCover.png"
         //     anchors.top: header.bottom
         //     anchors.bottom: footer.top
         // }
@@ -80,30 +91,15 @@ Kirigami.ApplicationWindow {
     }
 
     Kirigami.ScrollablePage {
-        id: cdISOLocationPage
+        id: cdLocationPage
         Layout.fillWidth: true
-        title: qsTr("Demo CD/ISO Location")
-
-        Backend {
-            id: myBackend
-
-            onNumberEmitted: (num) => {
-                                 randNum = num
-                             }
-
-            onScriptRun: (scriptOutput) => {
-                             output = scriptOutput
-                         }
-        }
+        title: qsTr("Demo CD Location")
 
         actions: [
             Kirigami.Action {
                 text:"Install"
                 icon.name: "install"
-                onTriggered: {
-                    // myBackend.generateNumber(2, 5)
-                    myBackend.runScript("billybob")
-                }
+                onTriggered: pageStack.push(installCompletePage)
             }
         ]
 
@@ -113,36 +109,35 @@ Kirigami.ApplicationWindow {
             Controls.Label {
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
-                text: "Please ensure your Demo CD/ISO is inserted/mounted and it's location is selected in the textbox below, then press the Install button above to proceed."
+                text: "Please ensure your Demo CD is mounted and it's location is selected in the textbox below, then press the Install button above to proceed."
             }
 
             RowLayout {
                 spacing: Kirigami.Units.smallSpacing
 
                 Controls.TextField {
-                    id: cdIsoLocation
-                    placeholderText: "Demo CD/ISO Location"
+                    id: cdLocation
+                    placeholderText: "Demo CD Location"
+                    text: cdMountLocation
                 }
 
                 Controls.Button {
                     id: browseButton
                     text: "Browse"
-                    onClicked: {
-                        fileDialog.open()
+                    onClicked: folderDialog.open()
+                }
+
+                FolderDialog {
+                    id: folderDialog
+                    onAccepted: {
+                        var path = folderDialog.currentFolder.toString();
+                        // remove prefixed "file:///"
+                        path = path.replace(/^(file:\/{3})/,"");
+                        // unescape html codes like '%23' for '#'
+                        var cleanPath = decodeURIComponent(path);
+                        cdLocation.text = cleanPath
                     }
                 }
-
-                FileDialog {
-                    id: fileDialog
-                    // currentFolder: StandardPaths.standardLocations(StandardPaths.PicturesLocation)[0]
-                    // onAccepted: image.source = selectedFile
-                }
-            }
-
-            Controls.Label {
-                Layout.fillWidth: true
-                wrapMode: Text.WordWrap
-                text: output
             }
         }
     }

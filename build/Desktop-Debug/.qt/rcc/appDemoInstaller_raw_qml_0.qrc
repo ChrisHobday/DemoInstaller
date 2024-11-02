@@ -2,6 +2,7 @@
   <qresource prefix="/DemoInstaller/">
     <file alias="Main.qml">/home/chris/Projects/QT/DemoInstaller/Main.qml</file>
     <file alias="Test.sh">/home/chris/Projects/QT/DemoInstaller/Test.sh</file>
+    <file alias="GetMountLocation.sh">/home/chris/Projects/QT/DemoInstaller/GetMountLocation.sh</file>
   </qresource>
 </RCC>
 

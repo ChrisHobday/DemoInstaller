@@ -13,21 +13,6 @@
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "min",
-                            "type": "int"
-                        },
-                        {
-                            "name": "max",
-                            "type": "int"
-                        }
-                    ],
-                    "name": "generateNumber",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
                             "name": "scriptPath",
                             "type": "QString"
                         }
@@ -39,17 +24,6 @@
             "object": true,
             "qualifiedClassName": "Backend",
             "signals": [
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "name": "num",
-                            "type": "int"
-                        }
-                    ],
-                    "name": "numberEmitted",
-                    "returnType": "void"
-                },
                 {
                     "access": "public",
                     "arguments": [

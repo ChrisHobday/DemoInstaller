@@ -10,11 +10,9 @@ class Backend : public QObject
     QML_ELEMENT
 public:
     explicit Backend(QObject *parent = nullptr);
-    Q_INVOKABLE void generateNumber(int min, int max);
     Q_INVOKABLE void runScript(QString scriptPath);
 
 signals:
-    void numberEmitted(int num);
     void scriptRun(QString scriptOutput);
 
 };

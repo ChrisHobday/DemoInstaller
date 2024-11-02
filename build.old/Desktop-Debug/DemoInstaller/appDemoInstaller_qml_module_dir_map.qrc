@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="/DemoInstaller">/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller</file>
-
-  </qresource>
-</RCC>

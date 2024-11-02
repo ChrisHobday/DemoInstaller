@@ -182,7 +182,7 @@ build all_qmllint_module: phony appDemoInstaller_qmllint_module
 #############################################
 # Utility command for appDemoInstaller_tooling
 
-build appDemoInstaller_tooling: phony DemoInstaller/Main.qml DemoInstaller/Test.sh
+build appDemoInstaller_tooling: phony DemoInstaller/Main.qml DemoInstaller/Test.sh DemoInstaller/GetMountLocation.sh
 
 
 #############################################
@@ -317,7 +317,7 @@ build .rcc/qmlcache/appDemoInstaller_Main_qml.cpp | ${cmake_ninja_workdir}.rcc/q
 #############################################
 # Custom command for .qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp
 
-build .qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Main.qml /home/chris/Projects/QT/DemoInstaller/Test.sh .qt/rcc/appDemoInstaller_raw_qml_0.qrc /usr/libexec/rcc || appDemoInstaller_autogen appDemoInstaller_autogen_timestamp_deps appDemoInstaller_qmlimportscan appDemoInstaller_tooling
+build .qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Main.qml /home/chris/Projects/QT/DemoInstaller/Test.sh /home/chris/Projects/QT/DemoInstaller/GetMountLocation.sh .qt/rcc/appDemoInstaller_raw_qml_0.qrc /usr/libexec/rcc || appDemoInstaller_autogen appDemoInstaller_autogen_timestamp_deps appDemoInstaller_qmlimportscan appDemoInstaller_tooling
   COMMAND = cd /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug && /usr/libexec/rcc --output /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp --name appDemoInstaller_raw_qml_0 /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/appDemoInstaller_raw_qml_0.qrc
   DESC = Running rcc for resource appDemoInstaller_raw_qml_0
   restat = 1
@@ -385,6 +385,15 @@ build DemoInstaller/Main.qml | ${cmake_ninja_workdir}DemoInstaller/Main.qml: CUS
 build DemoInstaller/Test.sh | ${cmake_ninja_workdir}DemoInstaller/Test.sh: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Test.sh
   COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/Test.sh /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Test.sh
   DESC = Copying Test.sh to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Test.sh
+  restat = 1
+
+
+#############################################
+# Custom command for DemoInstaller/GetMountLocation.sh
+
+build DemoInstaller/GetMountLocation.sh | ${cmake_ninja_workdir}DemoInstaller/GetMountLocation.sh: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/GetMountLocation.sh
+  COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/GetMountLocation.sh /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/GetMountLocation.sh
+  DESC = Copying GetMountLocation.sh to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/GetMountLocation.sh
   restat = 1
 
 

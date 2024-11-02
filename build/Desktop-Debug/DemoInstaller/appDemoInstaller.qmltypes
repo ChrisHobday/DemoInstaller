@@ -14,17 +14,8 @@ Module {
         exports: ["DemoInstaller/Backend 1.0"]
         exportMetaObjectRevisions: [256]
         Signal {
-            name: "numberEmitted"
-            Parameter { name: "num"; type: "int" }
-        }
-        Signal {
             name: "scriptRun"
             Parameter { name: "scriptOutput"; type: "QString" }
-        }
-        Method {
-            name: "generateNumber"
-            Parameter { name: "min"; type: "int" }
-            Parameter { name: "max"; type: "int" }
         }
         Method {
             name: "runScript"
