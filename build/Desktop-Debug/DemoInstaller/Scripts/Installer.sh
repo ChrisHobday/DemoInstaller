@@ -1,6 +1,6 @@
 #!/bin/bash
-echo "Creating symlink from $riskMountLocation to /var/data/WinePrefix/dosdevices/d:"
-ln -s $riskMountLocation /var/data/WinePrefix/dosdevices/d:
+echo "Creating symlink from $1 to /var/data/WinePrefix/dosdevices/d:"
+ln -s $1 /var/data/WinePrefix/dosdevices/d:
 
 echo "Making /var/data/WinePrefix/drive_c/Games"
 mkdir /var/data/WinePrefix/drive_c/Games

@@ -14,6 +14,7 @@ Kirigami.ApplicationWindow {
 
     property url cdMountLocation: ""
     property string wineSetupOutput: ""
+    property string installerOutput: ""
 
     // Tries to get the CD mount location if there is one, by using custom Backend Type from ProcessStarter.cpp to run a bash script
     Backend {
@@ -30,6 +31,15 @@ Kirigami.ApplicationWindow {
 
         onScriptRun: (scriptOutput) => {
                          wineSetupOutput = scriptOutput
+                     }
+    }
+
+    // Installs Windows CD software into Wine prefix
+    Backend {
+        id: installer
+
+        onScriptRun: (scriptOutput) => {
+                         installerOutput = scriptOutput
                      }
     }
 
@@ -109,7 +119,10 @@ Kirigami.ApplicationWindow {
             Kirigami.Action {
                 text:"Install"
                 icon.name: "install"
-                onTriggered: wineSetup.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh", [])
+                onTriggered: {
+                    wineSetup.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh", [])
+                    installer.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/Installer.sh", [cdLocation.text])
+                }
             }
         ]
 
@@ -149,7 +162,7 @@ Kirigami.ApplicationWindow {
                 id: installScriptOutput
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
-                text: wineSetupOutput
+                text: wineSetupOutput + installerOutput
             }
         }
     }
