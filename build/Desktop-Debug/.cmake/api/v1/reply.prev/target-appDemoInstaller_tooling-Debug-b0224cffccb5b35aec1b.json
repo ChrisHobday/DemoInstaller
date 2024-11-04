@@ -66,15 +66,17 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				2,
-				3
+				3,
+				4,
+				5
 			]
 		}
 	],
@@ -89,7 +91,13 @@
 		{
 			"backtrace" : 5,
 			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/DemoInstaller/GetMountLocation.sh",
+			"path" : "build/Desktop-Debug/DemoInstaller/Scripts/GetMountLocation.sh",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"isGenerated" : true,
+			"path" : "build/Desktop-Debug/DemoInstaller/Scripts/WineSetup.sh",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -101,7 +109,13 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/DemoInstaller/GetMountLocation.sh.rule",
+			"path" : "build/Desktop-Debug/DemoInstaller/Scripts/GetMountLocation.sh.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop-Debug/DemoInstaller/Scripts/WineSetup.sh.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

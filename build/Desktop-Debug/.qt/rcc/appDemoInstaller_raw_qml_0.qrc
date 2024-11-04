@@ -1,7 +1,8 @@
 <RCC>
   <qresource prefix="/DemoInstaller/">
     <file alias="Main.qml">/home/chris/Projects/QT/DemoInstaller/Main.qml</file>
-    <file alias="GetMountLocation.sh">/home/chris/Projects/QT/DemoInstaller/GetMountLocation.sh</file>
+    <file alias="Scripts/GetMountLocation.sh">/home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation.sh</file>
+    <file alias="Scripts/WineSetup.sh">/home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh</file>
   </qresource>
 </RCC>
 

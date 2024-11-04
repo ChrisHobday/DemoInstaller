@@ -13,13 +13,23 @@ Kirigami.ApplicationWindow {
     pageStack.initialPage: welcomePage //Set the initial page stack page to the welcome page
 
     property url cdMountLocation: ""
+    property string wineSetupOutput: ""
 
-    //Tries to get the CD mount location if there is one, by using custom Backend Type from ProcessStarter.cpp to run a bash script
+    // Tries to get the CD mount location if there is one, by using custom Backend Type from ProcessStarter.cpp to run a bash script
     Backend {
         id: getCDMountLocation
 
         onScriptRun: (scriptOutput) => {
                          cdMountLocation = scriptOutput
+                     }
+    }
+
+    // Sets up Wine
+    Backend {
+        id: wineSetup
+
+        onScriptRun: (scriptOutput) => {
+                         wineSetupOutput = scriptOutput
                      }
     }
 
@@ -33,7 +43,7 @@ Kirigami.ApplicationWindow {
                 text:"Next"
                 icon.name: "go-next"
                 onTriggered: {
-                    getCDMountLocation.runScript("/var/home/chris/Projects/QT/DemoInstaller/GetMountLocation.sh")
+                    getCDMountLocation.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation.sh")
                     pageStack.push(cdLocationPage)
                 }
             }
@@ -99,7 +109,7 @@ Kirigami.ApplicationWindow {
             Kirigami.Action {
                 text:"Install"
                 icon.name: "install"
-                onTriggered: pageStack.push(installCompletePage)
+                onTriggered: wineSetup.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh")
             }
         ]
 
@@ -139,6 +149,7 @@ Kirigami.ApplicationWindow {
                 id: installScriptOutput
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
+                text: wineSetupOutput
             }
         }
     }

@@ -91,13 +91,13 @@
 		{
 			"backtrace" : 5,
 			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/DemoInstaller/Test.sh",
+			"path" : "build/Desktop-Debug/DemoInstaller/Scripts/GetMountLocation.sh",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 5,
 			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/DemoInstaller/GetMountLocation.sh",
+			"path" : "build/Desktop-Debug/DemoInstaller/Scripts/WineSetup.sh",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -109,13 +109,13 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/DemoInstaller/Test.sh.rule",
+			"path" : "build/Desktop-Debug/DemoInstaller/Scripts/GetMountLocation.sh.rule",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/DemoInstaller/GetMountLocation.sh.rule",
+			"path" : "build/Desktop-Debug/DemoInstaller/Scripts/WineSetup.sh.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

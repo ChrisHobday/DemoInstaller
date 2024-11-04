@@ -99,13 +99,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 40,
+				"line" : 42,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 35,
+				"line" : 37,
 				"parent" : 0
 			},
 			{
@@ -977,12 +977,12 @@
 		},
 		{
 			"backtrace" : 87,
-			"path" : "Test.sh",
+			"path" : "Scripts/GetMountLocation.sh",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 87,
-			"path" : "GetMountLocation.sh",
+			"path" : "Scripts/WineSetup.sh",
 			"sourceGroupIndex" : 1
 		},
 		{
