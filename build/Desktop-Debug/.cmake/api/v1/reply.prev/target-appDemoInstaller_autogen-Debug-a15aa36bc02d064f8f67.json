@@ -17,12 +17,12 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "DemoInstaller_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"id" : "appDemoInstaller_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "DemoInstaller_autogen::@6890427a1f51a3e7e1df",
+	"id" : "appDemoInstaller_autogen::@6890427a1f51a3e7e1df",
 	"isGeneratorProvided" : true,
-	"name" : "DemoInstaller_autogen",
+	"name" : "appDemoInstaller_autogen",
 	"paths" : 
 	{
 		"build" : ".",
@@ -51,19 +51,19 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/CMakeFiles/DemoInstaller_autogen",
+			"path" : "build/Desktop-Debug/CMakeFiles/appDemoInstaller_autogen",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/CMakeFiles/DemoInstaller_autogen.rule",
+			"path" : "build/Desktop-Debug/CMakeFiles/appDemoInstaller_autogen.rule",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/DemoInstaller_autogen/timestamp.rule",
+			"path" : "build/Desktop-Debug/appDemoInstaller_autogen/timestamp.rule",
 			"sourceGroupIndex" : 1
 		}
 	],

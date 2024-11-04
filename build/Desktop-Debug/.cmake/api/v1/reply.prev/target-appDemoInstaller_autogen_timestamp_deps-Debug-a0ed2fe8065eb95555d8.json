@@ -18,16 +18,16 @@
 	[
 		{
 			"backtrace" : 0,
-			"id" : "DemoInstaller_tooling::@6890427a1f51a3e7e1df"
+			"id" : "appDemoInstaller_tooling::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 0,
-			"id" : "DemoInstaller_qmlimportscan::@6890427a1f51a3e7e1df"
+			"id" : "appDemoInstaller_qmlimportscan::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "DemoInstaller_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+	"id" : "appDemoInstaller_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
 	"isGeneratorProvided" : true,
-	"name" : "DemoInstaller_autogen_timestamp_deps",
+	"name" : "appDemoInstaller_autogen_timestamp_deps",
 	"paths" : 
 	{
 		"build" : ".",

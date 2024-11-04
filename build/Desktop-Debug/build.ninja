@@ -182,7 +182,7 @@ build all_qmllint_module: phony appDemoInstaller_qmllint_module
 #############################################
 # Utility command for appDemoInstaller_tooling
 
-build appDemoInstaller_tooling: phony DemoInstaller/Main.qml DemoInstaller/Scripts/GetMountLocation.sh DemoInstaller/Scripts/WineSetup.sh DemoInstaller/Registry/Risk.reg DemoInstaller/Registry/WineGraphics.reg
+build appDemoInstaller_tooling: phony DemoInstaller/Main.qml DemoInstaller/Scripts/GetMountLocation.sh DemoInstaller/Scripts/WineSetup.sh
 
 
 #############################################
@@ -317,7 +317,7 @@ build .rcc/qmlcache/appDemoInstaller_Main_qml.cpp | ${cmake_ninja_workdir}.rcc/q
 #############################################
 # Custom command for .qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp
 
-build .qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Main.qml /home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation.sh /home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh /home/chris/Projects/QT/DemoInstaller/Registry/Risk.reg /home/chris/Projects/QT/DemoInstaller/Registry/WineGraphics.reg .qt/rcc/appDemoInstaller_raw_qml_0.qrc /usr/libexec/rcc || appDemoInstaller_autogen appDemoInstaller_autogen_timestamp_deps appDemoInstaller_qmlimportscan appDemoInstaller_tooling
+build .qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Main.qml /home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation.sh /home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh .qt/rcc/appDemoInstaller_raw_qml_0.qrc /usr/libexec/rcc || appDemoInstaller_autogen appDemoInstaller_autogen_timestamp_deps appDemoInstaller_qmlimportscan appDemoInstaller_tooling
   COMMAND = cd /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug && /usr/libexec/rcc --output /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp --name appDemoInstaller_raw_qml_0 /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/appDemoInstaller_raw_qml_0.qrc
   DESC = Running rcc for resource appDemoInstaller_raw_qml_0
   restat = 1
@@ -394,24 +394,6 @@ build DemoInstaller/Scripts/GetMountLocation.sh | ${cmake_ninja_workdir}DemoInst
 build DemoInstaller/Scripts/WineSetup.sh | ${cmake_ninja_workdir}DemoInstaller/Scripts/WineSetup.sh: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh
   COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/WineSetup.sh
   DESC = Copying Scripts/WineSetup.sh to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/WineSetup.sh
-  restat = 1
-
-
-#############################################
-# Custom command for DemoInstaller/Registry/Risk.reg
-
-build DemoInstaller/Registry/Risk.reg | ${cmake_ninja_workdir}DemoInstaller/Registry/Risk.reg: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Registry/Risk.reg
-  COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/Registry/Risk.reg /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Registry/Risk.reg
-  DESC = Copying Registry/Risk.reg to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Registry/Risk.reg
-  restat = 1
-
-
-#############################################
-# Custom command for DemoInstaller/Registry/WineGraphics.reg
-
-build DemoInstaller/Registry/WineGraphics.reg | ${cmake_ninja_workdir}DemoInstaller/Registry/WineGraphics.reg: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Registry/WineGraphics.reg
-  COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/Registry/WineGraphics.reg /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Registry/WineGraphics.reg
-  DESC = Copying Registry/WineGraphics.reg to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Registry/WineGraphics.reg
   restat = 1
 
 

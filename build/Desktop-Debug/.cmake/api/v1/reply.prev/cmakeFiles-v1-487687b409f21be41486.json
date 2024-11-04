@@ -3727,7 +3727,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/.qt/qml_imports/DemoInstaller_conf.cmake"
+			"path" : "build/Desktop-Debug/.qt/qml_imports/appDemoInstaller_conf.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",

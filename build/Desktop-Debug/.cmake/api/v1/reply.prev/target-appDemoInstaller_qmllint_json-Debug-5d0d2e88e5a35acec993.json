@@ -1,11 +1,12 @@
 {
-	"backtrace" : 4,
+	"backtrace" : 5,
 	"backtraceGraph" : 
 	{
 		"commands" : 
 		[
 			"add_custom_target",
-			"_qt_internal_qml_type_registration",
+			"_qt_internal_target_enable_qmllint",
+			"qt6_target_qml_sources",
 			"qt6_add_qml_module",
 			"qt_add_qml_module"
 		],
@@ -20,33 +21,49 @@
 				"file" : 1
 			},
 			{
-				"command" : 3,
+				"command" : 4,
 				"file" : 1,
 				"line" : 15,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 780,
 				"parent" : 1
 			},
 			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 647,
+				"parent" : 2
+			},
+			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 541,
-				"parent" : 2
+				"line" : 2553,
+				"parent" : 3
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 3060,
-				"parent" : 3
+				"line" : 998,
+				"parent" : 4
 			}
 		]
 	},
-	"id" : "DemoInstaller_qmltyperegistration::@6890427a1f51a3e7e1df",
-	"name" : "DemoInstaller_qmltyperegistration",
+	"dependencies" : 
+	[
+		{
+			"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "/QmlLinter"
+	},
+	"id" : "appDemoInstaller_qmllint_json::@6890427a1f51a3e7e1df",
+	"name" : "appDemoInstaller_qmllint_json",
 	"paths" : 
 	{
 		"build" : ".",
@@ -65,29 +82,22 @@
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				1,
-				2
+				1
 			]
 		}
 	],
 	"sources" : 
 	[
 		{
-			"backtrace" : 4,
+			"backtrace" : 5,
 			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/CMakeFiles/DemoInstaller_qmltyperegistration",
+			"path" : "build/Desktop-Debug/CMakeFiles/appDemoInstaller_qmllint_json",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/CMakeFiles/DemoInstaller_qmltyperegistration.rule",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "build/Desktop-Debug/demoinstaller_qmltyperegistrations.cpp.rule",
+			"path" : "build/Desktop-Debug/CMakeFiles/appDemoInstaller_qmllint_json.rule",
 			"sourceGroupIndex" : 1
 		}
 	],
