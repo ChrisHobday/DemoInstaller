@@ -3,6 +3,7 @@
     <file alias="Main.qml">/home/chris/Projects/QT/DemoInstaller/Main.qml</file>
     <file alias="Scripts/GetMountLocation.sh">/home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation.sh</file>
     <file alias="Scripts/WineSetup.sh">/home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh</file>
+    <file alias="Scripts/Installer.sh">/home/chris/Projects/QT/DemoInstaller/Scripts/Installer.sh</file>
   </qresource>
 </RCC>
 

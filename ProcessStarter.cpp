@@ -8,7 +8,7 @@ void Backend::runScript(QString script)
 {
     QProcess *process = new QProcess(); // Create a process that will run the given script
     // process->setWorkingDirectory(""); // Set working directory where given script will be executed
-    process->start(script, QStringList()); // Start the given script
+    process->startDetached(script, QStringList()); // Start the given script
     process->waitForFinished();
 
     QString scriptOutput = process->readAllStandardOutput(); // Stores script output

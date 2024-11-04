@@ -20,6 +20,7 @@ qt_add_qml_module(appDemoInstaller
         RESOURCES
             Scripts/GetMountLocation.sh
             Scripts/WineSetup.sh
+            Scripts/Installer.sh
         SOURCES ProcessStarter.h ProcessStarter.cpp
 )
 
