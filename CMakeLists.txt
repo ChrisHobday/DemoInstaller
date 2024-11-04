@@ -41,7 +41,7 @@ target_link_libraries(appDemoInstaller
 )
 
 include(GNUInstallDirs)
-install(TARGETS DemoInstaller
+install(TARGETS appDemoInstaller
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}

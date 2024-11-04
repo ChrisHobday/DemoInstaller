@@ -1,0 +1,12 @@
+--bare
+-I
+/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug
+-I
+/usr/qml
+--resource
+/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/qmake_DemoInstaller.qrc
+--resource
+/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/DemoInstaller_raw_qml_0.qrc
+/home/chris/Projects/QT/DemoInstaller/Main.qml
+--json
+/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller_qmllint.json
