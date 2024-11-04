@@ -120,8 +120,10 @@ Kirigami.ApplicationWindow {
                 text:"Install"
                 icon.name: "install"
                 onTriggered: {
+                    installOutput.visible = true
                     wineSetup.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh", [])
                     installer.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/Installer.sh", [cdLocation.text])
+                    pageStack.push(installCompletePage)
                 }
             }
         ]
@@ -158,10 +160,12 @@ Kirigami.ApplicationWindow {
                 }
             }
 
-            Controls.Label {
-                id: installScriptOutput
+            Controls.TextArea {
+                id: installOutput
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
+                visible: false
+                enabled: false
                 text: wineSetupOutput + installerOutput
             }
         }
