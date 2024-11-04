@@ -11,10 +11,10 @@ pwd
 ls
 
 echo "Updating Windows registry with Risk paths"
-wine regedit /Registry/Risk.reg
+regpatch /Registry/Risk.reg
 
 echo "Updating Windows registry with Wine graphics keys"
-wine regedit /Registry/WineGraphics.reg
+regpatch /Registry/WineGraphics.reg
 
 pwd
 
