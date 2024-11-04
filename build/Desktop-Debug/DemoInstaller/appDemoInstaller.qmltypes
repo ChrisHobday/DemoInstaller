@@ -7,7 +7,7 @@ import QtQuick.tooling 1.2
 
 Module {
     Component {
-        file: "backend.h"
+        file: "ProcessStarter.h"
         name: "Backend"
         accessSemantics: "reference"
         prototype: "QObject"

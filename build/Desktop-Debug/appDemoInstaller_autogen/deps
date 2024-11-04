@@ -1,7 +1,7 @@
 appDemoInstaller_autogen/timestamp: \
 	/home/chris/Projects/QT/DemoInstaller/CMakeLists.txt \
-	/home/chris/Projects/QT/DemoInstaller/backend.cpp \
-	/home/chris/Projects/QT/DemoInstaller/backend.h \
+	/home/chris/Projects/QT/DemoInstaller/ProcessStarter.cpp \
+	/home/chris/Projects/QT/DemoInstaller/ProcessStarter.h \
 	/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/qml_imports/appDemoInstaller_conf.cmake \
 	/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qtc/package-manager/auto-setup.cmake \
 	/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/CMakeFiles/3.29.8/CMakeCXXCompiler.cmake \

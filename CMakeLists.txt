@@ -18,7 +18,7 @@ qt_add_qml_module(appDemoInstaller
     QML_FILES
         Main.qml
         RESOURCES Test.sh GetMountLocation.sh
-        SOURCES backend.h backend.cpp
+        SOURCES ProcessStarter.h ProcessStarter.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

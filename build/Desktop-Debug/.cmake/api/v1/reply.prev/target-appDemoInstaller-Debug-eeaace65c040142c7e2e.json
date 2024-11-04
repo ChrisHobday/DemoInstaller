@@ -99,13 +99,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 41,
+				"line" : 40,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 36,
+				"line" : 35,
 				"parent" : 0
 			},
 			{
@@ -922,13 +922,13 @@
 		},
 		{
 			"backtrace" : 77,
-			"path" : "backend.h",
+			"path" : "ProcessRunner.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 77,
 			"compileGroupIndex" : 0,
-			"path" : "backend.cpp",
+			"path" : "ProcessRunner.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-cf993797c31b85e2f546.json",
+					"jsonFile" : "directory-.-Debug-4279647f0eda0d3f75fc.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -92,7 +92,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appDemoInstaller::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appDemoInstaller-Debug-9a11d065e7eab69f62d1.json",
+					"jsonFile" : "target-appDemoInstaller-Debug-eeaace65c040142c7e2e.json",
 					"name" : "appDemoInstaller",
 					"projectIndex" : 0
 				},

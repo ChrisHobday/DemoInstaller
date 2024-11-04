@@ -900,9 +900,9 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/chris/Projects/QT/DemoInstaller/backend.h",
+			"/home/chris/Projects/QT/DemoInstaller/ProcessStarter.h",
 			"Mu",
-			"EWIEGA46WW/moc_backend.cpp",
+			"EWIEGA46WW/moc_ProcessStarter.cpp",
 			null
 		]
 	],
@@ -994,7 +994,11 @@
 	"SETTINGS_FILE" : "/home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/CMakeFiles/appDemoInstaller_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/chris/Projects/QT/DemoInstaller/backend.cpp", "Mu", null ],
+		[
+			"/home/chris/Projects/QT/DemoInstaller/ProcessStarter.cpp",
+			"Mu",
+			null
+		],
 		[ "/home/chris/Projects/QT/DemoInstaller/main.cpp", "Mu", null ]
 	],
 	"USE_BETTER_GRAPH" : false,
