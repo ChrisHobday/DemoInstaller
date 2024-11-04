@@ -17,7 +17,7 @@ qt_add_qml_module(appDemoInstaller
     VERSION 1.0
     QML_FILES
         Main.qml
-        RESOURCES Test.sh GetMountLocation.sh
+        RESOURCES GetMountLocation.sh
         SOURCES ProcessStarter.h ProcessStarter.cpp
 )
 

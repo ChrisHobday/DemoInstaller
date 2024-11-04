@@ -3,7 +3,7 @@ import QtQuick.Controls as Controls // Needed for various controls (https://doc.
 import QtQuick.Layouts // Needed for Column/Row Layout (https://doc.qt.io/qt-6/qtquicklayouts-index.html)
 import org.kde.kirigami as Kirigami // Needed for various KDE controls that follow the KDE Human Interface Guidelines (https://develop.kde.org/docs/getting-started/kirigami/)
 import QtQuick.Dialogs // Needed for FolderDialog (used to select the location of the CD with a dialog)
-import DemoInstaller // Needed for Backend type from ProcessStarter.cpp that runs the install script
+import DemoInstaller // Needed for Backend Type from ProcessStarter.cpp to run bash scripts
 
 Kirigami.ApplicationWindow {
     id: installerWindow
@@ -12,7 +12,7 @@ Kirigami.ApplicationWindow {
     title: qsTr("Demo Installer")
     pageStack.initialPage: welcomePage //Set the initial page stack page to the welcome page
 
-    property string cdMountLocation: ""
+    property url cdMountLocation: ""
 
     //Tries to get the CD mount location if there is one, by using custom Backend Type from ProcessStarter.cpp to run a bash script
     Backend {
@@ -117,8 +117,9 @@ Kirigami.ApplicationWindow {
 
                 Controls.TextField {
                     id: cdLocation
+                    Layout.fillWidth: true
                     placeholderText: "Demo CD Location"
-                    text: cdMountLocation
+                    text: decodeURIComponent(cdMountLocation) // The CD mount location with special url character removed
                 }
 
                 Controls.Button {
@@ -129,15 +130,15 @@ Kirigami.ApplicationWindow {
 
                 FolderDialog {
                     id: folderDialog
-                    onAccepted: {
-                        var path = folderDialog.currentFolder.toString();
-                        // remove prefixed "file:///"
-                        path = path.replace(/^(file:\/{3})/,"");
-                        // unescape html codes like '%23' for '#'
-                        var cleanPath = decodeURIComponent(path);
-                        cdLocation.text = cleanPath
-                    }
+                    currentFolder: "documentsFolder"
+                    onAccepted: cdLocation.text = decodeURIComponent(folderDialog.selectedFolder.toString().replace(/^(file:\/{2})/,"")); // Set CD location to the selected folder with the QT url prefix file:// and special characters stripped
                 }
+            }
+
+            Controls.Label {
+                id: installScriptOutput
+                Layout.fillWidth: true
+                wrapMode: Text.WordWrap
             }
         }
     }
