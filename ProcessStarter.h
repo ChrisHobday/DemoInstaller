@@ -11,7 +11,7 @@ class Backend : public QObject
 
 public:
     explicit Backend(QObject *parent = nullptr);
-    Q_INVOKABLE void runScript(QString scriptPath);
+    Q_INVOKABLE void runScript(QString scriptPath, QStringList arguments);
 
 signals:
     void scriptRun(QString scriptOutput);

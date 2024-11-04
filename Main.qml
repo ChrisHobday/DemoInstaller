@@ -43,7 +43,7 @@ Kirigami.ApplicationWindow {
                 text:"Next"
                 icon.name: "go-next"
                 onTriggered: {
-                    getCDMountLocation.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation.sh")
+                    getCDMountLocation.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation.sh", [])
                     pageStack.push(cdLocationPage)
                 }
             }
@@ -109,7 +109,7 @@ Kirigami.ApplicationWindow {
             Kirigami.Action {
                 text:"Install"
                 icon.name: "install"
-                onTriggered: wineSetup.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh")
+                onTriggered: wineSetup.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh", [])
             }
         ]
 

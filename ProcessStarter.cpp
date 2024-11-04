@@ -4,11 +4,11 @@ Backend::Backend(QObject *parent)
     : QObject{parent}
 {}
 
-void Backend::runScript(QString script)
+void Backend::runScript(QString script, QStringList arguments)
 {
     QProcess *process = new QProcess(); // Create a process that will run the given script
     // process->setWorkingDirectory(""); // Set working directory where given script will be executed
-    process->start(script, QStringList()); // Start the given script
+    process->start(script, arguments); // Start the given script
     process->waitForFinished();
 
     QString scriptOutput = process->readAllStandardOutput(); // Stores script output

@@ -16,6 +16,10 @@
                             {
                                 "name": "scriptPath",
                                 "type": "QString"
+                            },
+                            {
+                                "name": "arguments",
+                                "type": "QStringList"
                             }
                         ],
                         "name": "runScript",
