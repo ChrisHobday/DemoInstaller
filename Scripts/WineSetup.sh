@@ -1,6 +1,14 @@
 #!/bin/bash
+pwd
+
+ls
+
 echo "Initializing Wine prefix"
 wineboot -i
+
+pwd
+
+ls
 
 echo "Updating Windows registry with Risk paths"
 wine regedit /Registry/Risk.reg
