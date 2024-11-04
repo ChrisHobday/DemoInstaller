@@ -122,6 +122,7 @@ Kirigami.ApplicationWindow {
                 onTriggered: {
                     wineSetup.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh", [])
                     installer.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/Installer.sh", [cdLocation.text])
+                    pageStack.push(installCompletePage)
                 }
             }
         ]
