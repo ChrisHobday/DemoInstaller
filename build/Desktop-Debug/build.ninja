@@ -182,7 +182,7 @@ build all_qmllint_module: phony appDemoInstaller_qmllint_module
 #############################################
 # Utility command for appDemoInstaller_tooling
 
-build appDemoInstaller_tooling: phony DemoInstaller/Main.qml DemoInstaller/Scripts/GetMountLocation.sh DemoInstaller/Scripts/WineSetup.sh DemoInstaller/Scripts/Installer.sh
+build appDemoInstaller_tooling: phony DemoInstaller/Main.qml DemoInstaller/Scripts/GetMountLocation DemoInstaller/Scripts/WineSetup DemoInstaller/Scripts/Installer DemoInstaller/Scripts/Launcher
 
 
 #############################################
@@ -317,7 +317,7 @@ build .rcc/qmlcache/appDemoInstaller_Main_qml.cpp | ${cmake_ninja_workdir}.rcc/q
 #############################################
 # Custom command for .qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp
 
-build .qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Main.qml /home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation.sh /home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh /home/chris/Projects/QT/DemoInstaller/Scripts/Installer.sh .qt/rcc/appDemoInstaller_raw_qml_0.qrc /usr/libexec/rcc || appDemoInstaller_autogen appDemoInstaller_autogen_timestamp_deps appDemoInstaller_qmlimportscan appDemoInstaller_tooling
+build .qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp | ${cmake_ninja_workdir}.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Main.qml /home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation /home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup /home/chris/Projects/QT/DemoInstaller/Scripts/Installer /home/chris/Projects/QT/DemoInstaller/Scripts/Launcher .qt/rcc/appDemoInstaller_raw_qml_0.qrc /usr/libexec/rcc || appDemoInstaller_autogen appDemoInstaller_autogen_timestamp_deps appDemoInstaller_qmlimportscan appDemoInstaller_tooling
   COMMAND = cd /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug && /usr/libexec/rcc --output /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/qrc_appDemoInstaller_raw_qml_0.cpp --name appDemoInstaller_raw_qml_0 /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/.qt/rcc/appDemoInstaller_raw_qml_0.qrc
   DESC = Running rcc for resource appDemoInstaller_raw_qml_0
   restat = 1
@@ -380,29 +380,38 @@ build DemoInstaller/Main.qml | ${cmake_ninja_workdir}DemoInstaller/Main.qml: CUS
 
 
 #############################################
-# Custom command for DemoInstaller/Scripts/GetMountLocation.sh
+# Custom command for DemoInstaller/Scripts/GetMountLocation
 
-build DemoInstaller/Scripts/GetMountLocation.sh | ${cmake_ninja_workdir}DemoInstaller/Scripts/GetMountLocation.sh: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation.sh
-  COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation.sh /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/GetMountLocation.sh
-  DESC = Copying Scripts/GetMountLocation.sh to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/GetMountLocation.sh
+build DemoInstaller/Scripts/GetMountLocation | ${cmake_ninja_workdir}DemoInstaller/Scripts/GetMountLocation: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation
+  COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/GetMountLocation
+  DESC = Copying Scripts/GetMountLocation to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/GetMountLocation
   restat = 1
 
 
 #############################################
-# Custom command for DemoInstaller/Scripts/WineSetup.sh
+# Custom command for DemoInstaller/Scripts/WineSetup
 
-build DemoInstaller/Scripts/WineSetup.sh | ${cmake_ninja_workdir}DemoInstaller/Scripts/WineSetup.sh: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh
-  COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/WineSetup.sh
-  DESC = Copying Scripts/WineSetup.sh to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/WineSetup.sh
+build DemoInstaller/Scripts/WineSetup | ${cmake_ninja_workdir}DemoInstaller/Scripts/WineSetup: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup
+  COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/WineSetup
+  DESC = Copying Scripts/WineSetup to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/WineSetup
   restat = 1
 
 
 #############################################
-# Custom command for DemoInstaller/Scripts/Installer.sh
+# Custom command for DemoInstaller/Scripts/Installer
 
-build DemoInstaller/Scripts/Installer.sh | ${cmake_ninja_workdir}DemoInstaller/Scripts/Installer.sh: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Scripts/Installer.sh
-  COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/Scripts/Installer.sh /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/Installer.sh
-  DESC = Copying Scripts/Installer.sh to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/Installer.sh
+build DemoInstaller/Scripts/Installer | ${cmake_ninja_workdir}DemoInstaller/Scripts/Installer: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Scripts/Installer
+  COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/Scripts/Installer /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/Installer
+  DESC = Copying Scripts/Installer to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/Installer
+  restat = 1
+
+
+#############################################
+# Custom command for DemoInstaller/Scripts/Launcher
+
+build DemoInstaller/Scripts/Launcher | ${cmake_ninja_workdir}DemoInstaller/Scripts/Launcher: CUSTOM_COMMAND /home/chris/Projects/QT/DemoInstaller/Scripts/Launcher
+  COMMAND = cd /home/chris/Projects/QT/DemoInstaller && /usr/bin/cmake -E copy /home/chris/Projects/QT/DemoInstaller/Scripts/Launcher /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/Launcher
+  DESC = Copying Scripts/Launcher to /home/chris/Projects/QT/DemoInstaller/build/Desktop-Debug/DemoInstaller/Scripts/Launcher
   restat = 1
 
 

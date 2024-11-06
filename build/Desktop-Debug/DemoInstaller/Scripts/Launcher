@@ -1,0 +1,13 @@
+#!/bin/sh
+echo "Checking if Demo is installed"
+if [ -d /var/data/WinePrefix/drive_c/Games/Demo ]; then
+    echo "Demo is installed"
+    echo "Launching Demo"
+
+    DemoLauncher
+else
+    echo "Demo is not installed"
+    echo "Launching Demo installer"
+
+    appDemoInstaller # Launch QT GUI DemoInstaller
+fi

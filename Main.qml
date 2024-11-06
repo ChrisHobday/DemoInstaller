@@ -53,7 +53,7 @@ Kirigami.ApplicationWindow {
                 text:"Next"
                 icon.name: "go-next"
                 onTriggered: {
-                    getCDMountLocation.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation.sh", [])
+                    getCDMountLocation.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation", [])
                     pageStack.push(cdLocationPage)
                 }
             }
@@ -121,8 +121,8 @@ Kirigami.ApplicationWindow {
                 icon.name: "install"
                 onTriggered: {
                     installOutput.visible = true
-                    wineSetup.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup.sh", [])
-                    installer.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/Installer.sh", [cdLocation.text])
+                    wineSetup.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup", [])
+                    installer.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/Installer", [cdLocation.text])
                     pageStack.push(installCompletePage)
                 }
             }
@@ -150,6 +150,7 @@ Kirigami.ApplicationWindow {
                 Controls.Button {
                     id: browseButton
                     text: "Browse"
+                    icon.name: "find-location"
                     onClicked: folderDialog.open()
                 }
 
@@ -178,9 +179,12 @@ Kirigami.ApplicationWindow {
 
         actions: [
             Kirigami.Action {
-                text:"Launch"
-                icon.name: "launch"
-                onTriggered: print ("Launching")
+                text:"Start"
+                icon.name: "media-playback-start"
+                onTriggered: {
+
+                    onClicked: installerWindow.close();
+                }
             }
         ]
 
