@@ -5,12 +5,12 @@ ln -s $1 /var/data/WinePrefix/dosdevices/d:
 echo "Making /var/data/WinePrefix/drive_c/Games"
 mkdir /var/data/WinePrefix/drive_c/Games
 
-echo "Copying /var/data/WinePrefix/dosdevices/d: to /var/data/WinePrefix/drive_c/Games/Demo (to act as Demo installation dir and CDPATH)"
+echo "Copying /var/data/WinePrefix/dosdevices/d: to /var/data/WinePrefix/drive_c/Games/Demo"
 cp -r --no-preserve=mode /var/data/WinePrefix/dosdevices/d:/ /var/data/WinePrefix/drive_c/Games/Demo
 
 echo "Removing symlink from $1 to /var/data/WinePrefix/dosdevices/d:"
 rm /var/data/WinePrefix/dosdevices/d:
 
 # Only needed if there is a better .exe or the .exe is in a different location
-#echo "Moving /var/data/WinePrefix/drive_c/Games/Demo/ENGLISH/DEMO.EXE to /var/data/WinePrefix/drive_c/Games/Demo/demo.exe"
-#mv /var/data/WinePrefix/drive_c/Games/Demo/ENGLISH/DEMO.EXE /var/data/WinePrefix/drive_c/Games/Demo/demo.exe
+# echo "Moving /var/data/WinePrefix/drive_c/Games/Demo/ENGLISH/DEMO.EXE to /var/data/WinePrefix/drive_c/Games/Demo/demo.exe"
+# mv /var/data/WinePrefix/drive_c/Games/Demo/ENGLISH/DEMO.EXE /var/data/WinePrefix/drive_c/Games/Demo/demo.exe

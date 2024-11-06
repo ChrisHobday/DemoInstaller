@@ -1,10 +1,6 @@
 <RCC>
   <qresource prefix="/DemoInstaller/">
     <file alias="Main.qml">/home/chris/Projects/QT/DemoInstaller/Main.qml</file>
-    <file alias="Scripts/GetMountLocation">/home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation</file>
-    <file alias="Scripts/WineSetup">/home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup</file>
-    <file alias="Scripts/Installer">/home/chris/Projects/QT/DemoInstaller/Scripts/Installer</file>
-    <file alias="Scripts/Launcher">/home/chris/Projects/QT/DemoInstaller/Scripts/Launcher</file>
   </qresource>
 </RCC>
 

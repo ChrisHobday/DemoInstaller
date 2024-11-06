@@ -53,7 +53,7 @@ Kirigami.ApplicationWindow {
                 text:"Next"
                 icon.name: "go-next"
                 onTriggered: {
-                    getCDMountLocation.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/GetMountLocation", [])
+                    getCDMountLocation.runScript("GetMountLocation", [])
                     pageStack.push(cdLocationPage)
                 }
             }
@@ -121,8 +121,8 @@ Kirigami.ApplicationWindow {
                 icon.name: "install"
                 onTriggered: {
                     installOutput.visible = true
-                    wineSetup.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/WineSetup", [])
-                    installer.runScript("/var/home/chris/Projects/QT/DemoInstaller/Scripts/Installer", [cdLocation.text])
+                    wineSetup.runScript("WineSetup", [])
+                    installer.runScript("Install", [cdLocation.text])
                     pageStack.push(installCompletePage)
                 }
             }
@@ -182,12 +182,11 @@ Kirigami.ApplicationWindow {
                 text:"Start"
                 icon.name: "media-playback-start"
                 onTriggered: {
-
+                    wineSetup.runScript("Launch", [])
                     onClicked: installerWindow.close();
                 }
             }
         ]
-
 
         ColumnLayout {
             spacing: Kirigami.Units.smallSpacing
@@ -196,7 +195,7 @@ Kirigami.ApplicationWindow {
             Controls.Label {
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
-                text: "The installation is complete! Now whenever you launch this application it will take you directly into your game, no CD needed! Have fun!"
+                text: "The installation is complete! Now whenever you launch this application it will take you directly into your game, no CD needed! You can either close this Window, or press the Start button above to Start Demo now."
             }
         }
 
